@@ -10,6 +10,7 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/nav-bar.css" />
+    <script defer src="js/form.js"></script>
 </head>
 
 <body id="background">
@@ -34,28 +35,33 @@
                 <form>
                     <div class="mb-3">
                         <label for="imput-nome" class="form-label-mb-1">Nome</label>
-                        <input type="nome" class="form-control" value="Insira o seu nome completo" id="imput-nome;">
+                        <input type="nome" class="form-control" placeholder="Insira o seu nome completo"
+                            id="input-name">
                     </div>
                     <div class="mb-5">
                         <label for="input-email" class="form-label-mb-1">E-mail</label>
-                        <input type="email" class="form-control" value="Insira o seu e-mail" id="input-email">
+                        <input type="email" class="form-control" placeholder="Insira o seu e-mail" id="input-email">
+                        <div id="emailError" class="form-text hidden"
+                            style="font-size: 16px; color: #FF3939; font-weight: 100;">E-mail inválido
+                        </div>
                     </div>
                     <div class="mb-3">
                         <label for="input-password" class="form-label-mb-1">Senha</label>
                         <input type="password" class="form-control" id="input-password">
-                        <div id="emailHelp" class="form-text" style="font-size: 16px;">Use ao menos 8 caracteres
+                        <div id="passwordHelp" class="form-text" style="font-size: 16px;">Use ao menos 8 caracteres
                             contendo letras, números e ao
                             menos um caractere especial </div>
                     </div>
                     <div class="mb-3">
                         <label for="input-password" class="form-label-mb-1">Repetir a senha</label>
-                        <input type="password" class="form-control" id="input-password">
-                        <div id="emailHelp" class="form-text"
-                            style="font-size: 16px; color: #FF3939; font-weight: 100;">Senha não confere
+                        <input type="password" class="form-control" id="input-repeat-password">
+                        <div id="passwordError" class="form-text hidden"
+                            style="font-size: 16px; color: #FF3939; font-weight: 100;">Senha não
+                            confere
                         </div>
                     </div>
                     <div style="display: flex; justify-content: center;">
-                        <button type="button" class="btn btn-primary btn-lg"
+                        <button type="button" class="btn btn-primary btn-lg" id="send"
                             style="color: white; background-color: #5E5796; border-color: #5E5796; font-weight: 1000; width: 195px; height: 54px;">Cadastrar</button>
                     </div>
                 </form>
