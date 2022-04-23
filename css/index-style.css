@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+.titulo-inicial {
+    font-family: tahoma;
+    font-style: bold;
+    font-weight: 900;
+    color: #6B5AC6;
+    font-size: 100px;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.sub-titulo {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    color: #EEECEE;
+    font-size: 60px;
+    text-align: center;
+}
+
+#texto-pagina-inicial-01 {
+    position: absolute;
+    left: 23%;
+    top: 55%;
+    font-family: Verdana;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#texto-pagina-inicial-02 {
+    position: absolute;
+    left: 15%;
+    top: 65%;
+    font-family: Verdana;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#seta-pagina-inicial-01 {
+    position: absolute;
+    left: 21%;
+    top: 70%;
+    font-family: Verdana;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#seta-pagina-inicial-02 {
+    width: 239px;
+    height: 142px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.card {
+    border-radius: 25px;
+    width: 280px;
+    height: 350px;
+    border: 3px solid #707070;
+    background-color: #FFFFFE;
+    display: flex;
+    flex-direction: column;
+    transition: all 2s;
+}
+
+.carta-conteudo {
+    height: 50%;
+    padding-top: 15%;
+    padding-bottom: 15%;
+    text-align: center;
+}
+
+.texto-carta {
+    font-family: 'Trebuchet MS';
+    font-size: 54px;
+    font-weight: bold;
+    color: #4B5366;
+}
+
+.carta-linha {
+    width: 80%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
