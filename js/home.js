@@ -1,56 +1,66 @@
 
-localStorage.nomeColecaoFixo = "Objetos";
-localStorage.imagemColecaoFixa = "images/Ball.png";
-
-var colecoes = [];
-colecoes = JSON.parse(localStorage.getItem("colecoes"));
-
-var novaColecao = [];
-novaColecao = colecoes[0];
-
 window.onload = () => {
 
+    let colecoes = [];
+    colecoes = JSON.parse(localStorage.getItem("colecoes"));
+
+    mostraColecao(colecoes);
+}
+
+function mostraColecao(colecoes) {
+
+    let novaColecao = [];
+
+    colecoes.forEach(() => {
+        novaColecao = colecoes;
+    });
+
+    novaColecao.forEach(() => {
+        carregaCartao();
+    });
+}
+
+function carregaCartao() {
+
+    let linha = document.querySelector(".row");
+
+    let novoEspaco = document.createElement("div");
+    novoEspaco.classList.add("col-3");
+    novoEspaco.classList.add("home-colecao");
+    linha.appendChild(novoEspaco);
 
     let novoCartao = document.createElement("div");
     novoCartao.classList.add("card");
+    novoEspaco.appendChild(novoCartao);
 
-    let espaco01 = document.querySelector("#espaco-01");
-    espaco01.appendChild(novoCartao);
-
-    let primeiraDivCartao = document.createElement("div");
-    primeiraDivCartao.classList.add("carta-conteudo");
-    novoCartao.appendChild(primeiraDivCartao);
-
-    let segundaDivCartao = document.createElement("div");
-    segundaDivCartao.classList.add("carta-conteudo");
-    novoCartao.appendChild(segundaDivCartao);
-
-    let terceiraDivCartao = document.createElement("div");
-    terceiraDivCartao.classList.add("carta-conteudo");
-    novoCartao.appendChild(terceiraDivCartao);
-
-    let quartaDivCartao = document.createElement("div");
-    quartaDivCartao.classList.add("carta-conteudo");
-    novoCartao.appendChild(quartaDivCartao);
-
+    let divEditar = divCartao(novoCartao);
     let editar = document.createElement("img");
     editar.setAttribute("src", "images/Editar.png");
     editar.classList.add("icone-editar");
-    primeiraDivCartao.appendChild(editar);
+    divEditar.appendChild(editar);
 
-    let bola = document.createElement("img");
-    bola.src = novaColecao[1];
-    //bola.setAttribute("src", "images/Ball.png");
-    bola.classList.add("carta-img");
-    segundaDivCartao.appendChild(bola);
+    let divImg = divCartao(novoCartao);
+    let img = document.createElement("img");
+    img.src = novaColecao[1];
+    img.classList.add("carta-img");
+    divImg.appendChild(img);
 
+    let divTexto = divCartao(novoCartao);
     let novoTexto = document.createElement("h5")
     novoTexto.classList.add("texto-carta");
-    terceiraDivCartao.appendChild(novoTexto);
+    divTexto.appendChild(novoTexto);
     novoTexto.innerHTML = novaColecao[0];
 
+    let divExcluir = divCartao(novoCartao);
     let excluir = document.createElement("img");
     excluir.setAttribute("src", "images/Excluir.png");
     excluir.classList.add("icone-excluir");
-    quartaDivCartao.appendChild(excluir);
+    divExcluir.appendChild(excluir);
+}
+
+function divCartao(novoCartao) {
+    let novaDivCartao = document.createElement("div");
+    novaDivCartao.classList.add("carta-conteudo");
+    novoCartao.appendChild(novaDivCartao);
+    return novaDivCartao;
 }
