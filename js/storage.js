@@ -1,19 +1,14 @@
-localStorage.nomeColecaoFixo = "Objetos";
-localStorage.imagemColecaoFixa = "images/Ball.png";
 
-localStorage.setItem("colecoes", "[]");
-localStorage.setItem("novaColecao", "[]");
+function addNovaColecao(nomeColecao, imgColecao) {
 
-var novaColecao = [] = JSON.parse(localStorage.getItem("novaColecao"));
-var colecoes = [] = JSON.parse(localStorage.getItem("colecoes"));
+    let colecoes = JSON.parse(localStorage.getItem("colecoes")) || [];
+    let novaColecao = [];
+    novaColecao.push(
+        nomeColecao,
+        imgColecao
+    );
 
-novaColecao.push(
-    localStorage.nomeColecaoFixo,
-    localStorage.imagemColecaoFixa
-);
-
-colecoes.push(novaColecao);
-
-localStorage.setItem("colecoes", JSON.stringify(colecoes));
-localStorage.setItem("novaColecao", JSON.stringify(novaColecao));
+    colecoes.push(novaColecao);
+    localStorage.setItem("colecoes", JSON.stringify(colecoes));
+}
 

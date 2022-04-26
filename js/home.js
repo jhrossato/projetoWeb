@@ -1,26 +1,19 @@
 
 window.onload = () => {
 
-    let colecoes = [];
-    colecoes = JSON.parse(localStorage.getItem("colecoes"));
-
-    mostraColecao(colecoes);
+    carregaCartao("Objetos", "images/Ball.png");
+    mostraColecao();
 }
 
-function mostraColecao(colecoes) {
+function mostraColecao() {
 
-    let novaColecao = [];
-
-    colecoes.forEach(() => {
-        novaColecao = colecoes;
-    });
-
-    novaColecao.forEach(() => {
-        carregaCartao();
-    });
+    let colecoes = JSON.parse(localStorage.getItem("colecoes")) || [];
+    for (l = 0; l < colecoes.length; l++) {
+        carregaCartao(colecoes[l][0], colecoes[l][1]);
+    }
 }
 
-function carregaCartao() {
+function carregaCartao(nome, imagemSrc) {
 
     let linha = document.querySelector(".row");
 
@@ -40,8 +33,9 @@ function carregaCartao() {
     divEditar.appendChild(editar);
 
     let divImg = divCartao(novoCartao);
+    divImg.classList.add("div-img");
     let img = document.createElement("img");
-    img.src = novaColecao[1];
+    img.src = imagemSrc;
     img.classList.add("carta-img");
     divImg.appendChild(img);
 
@@ -49,7 +43,7 @@ function carregaCartao() {
     let novoTexto = document.createElement("h5")
     novoTexto.classList.add("texto-carta");
     divTexto.appendChild(novoTexto);
-    novoTexto.innerHTML = novaColecao[0];
+    novoTexto.innerHTML = nome;
 
     let divExcluir = divCartao(novoCartao);
     let excluir = document.createElement("img");

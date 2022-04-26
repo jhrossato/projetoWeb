@@ -4,7 +4,7 @@
 .card {
     border-radius: 15px;
     width: 325px;
-    height: 100%;
+    height: 464px;
     border: 3px solid #707070;
     background-color: #FFFFFE;
     display: flex;
@@ -36,9 +36,17 @@
     margin: auto;
 }
 
+.div-img {
+    width: 319px;
+    height: 260px;
+}
+
 .carta-img {
+    padding: 10%;
     cursor: pointer;
-    width: 80%;
+    width: 250px;
+    height: 260px;
+    object-fit: contain;
 }
 
 .icone-editar {
