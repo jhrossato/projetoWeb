@@ -18,4 +18,18 @@ document.querySelector("#send").addEventListener("click", () => {
     addNovaColecao(nome.value, img);
 });
 
+function addNovaColecao(nomeColecao, imgColecao) {
+
+    let colecoes = JSON.parse(localStorage.getItem("colecoes")) || [];
+
+    colecoes.push({
+        nome: nomeColecao,
+        img: imgColecao
+    });
+
+    localStorage.setItem("colecoes", JSON.stringify(colecoes));
+}
+
+
+
 

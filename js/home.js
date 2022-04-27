@@ -1,7 +1,7 @@
 
 window.onload = () => {
 
-    carregaCartao("Objetos", "images/Ball.png");
+    carregaCartao(10, "Objetos", "images/Ball.png");
     mostraColecao();
 }
 
@@ -9,11 +9,11 @@ function mostraColecao() {
 
     let colecoes = JSON.parse(localStorage.getItem("colecoes")) || [];
     for (l = 0; l < colecoes.length; l++) {
-        carregaCartao(colecoes[l][0], colecoes[l][1]);
+        carregaCartao(l, colecoes[l].nome, colecoes[l].img);
     }
 }
 
-function carregaCartao(nome, imagemSrc) {
+function carregaCartao(id, nome, imagemSrc) {
 
     let linha = document.querySelector(".row");
 
@@ -38,12 +38,18 @@ function carregaCartao(nome, imagemSrc) {
     img.src = imagemSrc;
     img.classList.add("carta-img");
     divImg.appendChild(img);
+    img.addEventListener("click", () => {
+        window.location = 'colecao.html' + '?id=' + id;
+    });
 
     let divTexto = divCartao(novoCartao);
     let novoTexto = document.createElement("h5")
     novoTexto.classList.add("texto-carta");
     divTexto.appendChild(novoTexto);
     novoTexto.innerHTML = nome;
+    novoTexto.addEventListener("click", () => {
+        window.location = 'colecao.html' + '?id=' + id;
+    });
 
     let divExcluir = divCartao(novoCartao);
     let excluir = document.createElement("img");
