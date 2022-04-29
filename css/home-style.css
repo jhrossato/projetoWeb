@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
-
 .card {
     border-radius: 15px;
     width: 325px;
@@ -9,6 +8,8 @@
     background-color: #FFFFFE;
     display: flex;
     flex-direction: column;
+    object-fit: contain;
+
 }
 
 .carta-conteudo {
@@ -37,14 +38,14 @@
 }
 
 .div-img {
-    width: 319px;
+    width: 100%;
     height: 260px;
 }
 
 .carta-img {
     padding: 10%;
     cursor: pointer;
-    width: 250px;
+    width: 100%;
     height: 260px;
     object-fit: contain;
 }
@@ -69,4 +70,38 @@
 .row {
     display: flex;
     justify-content: center;
+}
+
+.texto-nova-carta {
+    margin-top: 25%;
+    font-size: 25px;
+    font-family: Helvetica;
+    color: #414141;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.botao-cadastrar {
+    color: white;
+    background-color: #5E5796;
+    border-color: #5E5796;
+    font-weight: 1000;
+    width: 325px;
+    height: 54px;
+    margin-top: 10px
+}
+
+.carta-conteudo1 {
+    height: 50%;
+    padding-top: 15%;
+    padding-bottom: 15%;
+    text-align: center;
+}
+
+.texto-carta1 {
+    font-family: 'Trebuchet MS';
+    font-size: 54px;
+    font-weight: bold;
+    color: #4B5366;
 }

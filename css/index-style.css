@@ -2,12 +2,11 @@
 
 .titulo-inicial {
     font-family: tahoma;
-    font-style: bold;
     font-weight: 900;
     color: #6B5AC6;
     font-size: 100px;
     text-align: center;
-    padding-top: 100px;
+    padding-top: 60px;
 }
 
 .sub-titulo {

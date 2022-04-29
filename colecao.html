@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="css/global-style.css" />
     <link rel="stylesheet" type="text/css" href="css/home-style.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script defer src="js/home.js"></script>
 </head>
 
 <body>
@@ -30,13 +31,35 @@
             </div>
         </div>
     </nav>
+    <div class="container-fluid">
+        <h2 class="titulo-generico mb-3" id="titulo-colecao">Coleção - </h2>
+        <div id="container">
+            <div class="input-group mb-4">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default"> <img
+                            src="images/Grupo 28.png"></span>
+                </div>
+                <input type="text" class="form-control" aria-label="Default"
+                    aria-describedby="inputGroup-sizing-default" placeholder="Busque por um elemento">
+            </div>
+            <div class="input-group mb-4">
+                <form action="">
+                    <button type="button" class="btn btn-primary btn-lg botao-generico" id="nova-colecao"
+                        onClick="loadDoc()">Novo
+                        cartão</button>
+                </form>
+            </div>
+        </div>
+    </div>
 
-    <script>
+
+
+    <!-- <script>
         const urlParams = new URLSearchParams(window.location.search);
         console.log(urlParams)
         const idParam = urlParams.get('id');
         alert(idParam);
-    </script>
+    </script> -->
 
 </body>
 
