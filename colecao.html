@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="css/global-style.css" />
     <link rel="stylesheet" type="text/css" href="css/home-style.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <script defer src="js/home.js"></script>
+    <script defer src="js/colecao.js"></script>
 </head>
 
 <body>
@@ -31,7 +31,7 @@
             </div>
         </div>
     </nav>
-    <div class="container-fluid">
+    <div class="container-fluid" id="container-fluid">
         <h2 class="titulo-generico mb-3" id="titulo-colecao">Coleção - </h2>
         <div id="container">
             <div class="input-group mb-4">
@@ -43,24 +43,23 @@
                     aria-describedby="inputGroup-sizing-default" placeholder="Busque por um elemento">
             </div>
             <div class="input-group mb-4">
-                <form action="">
-                    <button type="button" class="btn btn-primary btn-lg botao-generico" id="nova-colecao"
-                        onClick="loadDoc()">Novo
-                        cartão</button>
+                <form>
+                    <button type="button" class="btn btn-primary btn-lg botao-generico" id="novo-cartao">
+                        Novo cartão
+                    </button>
                 </form>
             </div>
+            <div class="d-flex flex-column bd-highlight mb-5" id="lista-cartas">
+                <!-- AS CARTAS ENTRAM AQUI -->
+            </div>
+            <form style="text-align:center">
+                <button type="button" class="btn btn-primary btn-lg botao-generico" id="jogar"
+                    style="background-color: #57966A">
+                    Jogar!
+                </button>
+            </form>
         </div>
     </div>
-
-
-
-    <!-- <script>
-        const urlParams = new URLSearchParams(window.location.search);
-        console.log(urlParams)
-        const idParam = urlParams.get('id');
-        alert(idParam);
-    </script> -->
-
 </body>
 
 </html>

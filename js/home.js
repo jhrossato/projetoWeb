@@ -1,7 +1,7 @@
 
 window.onload = () => {
 
-    carregaCartao(10, "Objetos", "images/Ball.png");
+    // carregaCartao(10, "Objetos", "images/Ball.png");
     mostraColecao();
 }
 
@@ -65,15 +65,3 @@ function divCartao(novoCartao) {
     return novaDivCartao;
 }
 
-function loadDoc() {
-    var xhttp = new XMLHttpRequest();
-
-    xhttp.onreadystatechange = function () {
-        if (xhttp.readyState == 4 && xhttp.status == 200) {
-
-            document.getElementById("container").innerHTML = xhttp.responseText;
-        }
-    }
-    xhttp.open("GET", "novo-cartao.txt", true);
-    xhttp.send();
-};

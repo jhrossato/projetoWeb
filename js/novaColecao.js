@@ -1,3 +1,5 @@
+const colecoes = JSON.parse(localStorage.getItem("colecoes")) || [];
+const cartas = [];
 
 document.querySelector("#input-imagem").addEventListener("change", function () {
 
@@ -20,11 +22,10 @@ document.querySelector("#send").addEventListener("click", () => {
 
 function addNovaColecao(nomeColecao, imgColecao) {
 
-    let colecoes = JSON.parse(localStorage.getItem("colecoes")) || [];
-
     colecoes.push({
         nome: nomeColecao,
-        img: imgColecao
+        img: imgColecao,
+        cartas: cartas
     });
 
     localStorage.setItem("colecoes", JSON.stringify(colecoes));

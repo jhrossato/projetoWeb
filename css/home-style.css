@@ -13,7 +13,8 @@
 }
 
 .carta-conteudo {
-    padding: 4%;
+    padding-top: 4%;
+    padding-bottom: 4%;
     width: 100%;
     text-align: center;
 }
@@ -53,13 +54,15 @@
 .icone-editar {
     float: right;
     cursor: pointer;
-    width: 12%;
+    width: 36px;
+    margin-right: 10px;
 }
 
 .icone-excluir {
     float: right;
     cursor: pointer;
-    width: 12%;
+    width: 36px;
+    margin-right: 10px;
 }
 
 .home-colecao {
@@ -104,4 +107,45 @@
     font-size: 54px;
     font-weight: bold;
     color: #4B5366;
+}
+
+.lista-cartas {
+    color: #3C3C3C;
+    background-color: #FFFFFF;
+    border: 1px solid #707070;
+    border-radius: 3px;
+}
+
+.texto-carta-lista {
+    font-family: tahoma;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.texto-input-carta {
+    position: absolute;
+    top: 2%;
+    color: #777777
+}
+
+.texto-carta-jogar-frente {
+    margin-top: 50%;
+    font-size: 36px;
+    font-family: Helvetica;
+    color: #414141;
+    text-align: center;
+    font-weight: bold;
+}
+
+.texto-carta-jogar-verso {
+    margin-top: 20%;
+    font-size: 36px;
+    font-family: Helvetica;
+    color: #414141;
+    text-align: center;
+    font-weight: bold;
 }

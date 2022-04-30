@@ -1,0 +1,16 @@
+<div class="container-fluid" style="padding-left: 5%; padding-right: 5%;">
+    <div style="padding-bottom: 20px; color: #FFFFFF; font-family: Tahoma;">
+        <h5 style="text-align: center; font-size: 36px;" id="total-cartoes-frente">Cartão </h5>
+    </div>
+    <div class="row" id="linha">
+        <div class="card">
+            <div class="carta-conteudo1">
+                <h5 class="texto-carta-jogar-frente" id="texto-carta-frente-jogar"></h5>
+            </div>
+        </div>
+        <div style="display: flex; justify-content: center;">
+            <button type="button" class="btn btn-primary btn-lg botao-cadastrar" id="virar" style="background-color: #57966A;">Virar</button>
+        </div>
+    </div>
+</div>
+

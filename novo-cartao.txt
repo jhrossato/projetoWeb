@@ -2,22 +2,23 @@
     <div style="padding-bottom: 50px; color: #FFFFFF; font-family: Tahoma;">
         <h5 style="text-align: center; font-size: 36px;">Preencha os dados da frente e do verso do flashcard</h5>
     </div>
-    <div class="row">
+    <div class="row" id="linha">
         <div class="card">
             <div class="carta-conteudo1">
-                <h5 style="position: absolute; top: 2%; color: #777777">Frente</h5>
-                <input type="nome" id="input-name" class="texto-nova-carta">
+                <h5 class="texto-input-carta">Frente</h5>
+                <input type="nome" id="input-frente" class="texto-nova-carta">
             </div>
             <div>
                 <img class="carta-linha" src="images/Linha 3.png">
             </div>
             <div class="carta-conteudo1">
                 <h5 style="position: absolute; top: 52%; color: #777777">Verso</h5>
-                <input type="nome" id="input-name" class="texto-nova-carta">
+                <input type="nome" id="input-verso" class="texto-nova-carta">
             </div>
         </div>
         <div style="display: flex; justify-content: center;">
-            <button type="button" class="btn btn-primary btn-lg botao-cadastrar" id="send">Cadastrar</button>
+            <button type="button" class="btn btn-primary btn-lg botao-cadastrar" id="cadastrar-novo-cartao">Cadastrar</button>
         </div>
     </div>
 </div>
+
