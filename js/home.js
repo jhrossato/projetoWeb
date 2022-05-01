@@ -56,6 +56,12 @@ function carregaCartao(id, nome, imagemSrc) {
     excluir.setAttribute("src", "images/Excluir.png");
     excluir.classList.add("icone-excluir");
     divExcluir.appendChild(excluir);
+    excluir.addEventListener("click", () => {
+        let modalExlcuir = document.getElementById("modal-excluir");
+        let modal = new bootstrap.ui.Modal(modalExlcuir);
+        modal.show();
+    })
+
 }
 
 function divCartao(novoCartao) {
@@ -64,4 +70,3 @@ function divCartao(novoCartao) {
     novoCartao.appendChild(novaDivCartao);
     return novaDivCartao;
 }
-

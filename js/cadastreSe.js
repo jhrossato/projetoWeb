@@ -23,5 +23,19 @@ btn.addEventListener("click", () => {
             "\nSenha: " + password.value +
             "\nRepetir a Senha: " + password2.value
         );
+
+        salvaCadastro(name.value, email.value, password.value);
+        window.location = 'index.html';
     }
 });
+
+function salvaCadastro(nome, email, senha) {
+    const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+    usuarios.push({
+        nome: nome,
+        email: email,
+        senha: senha
+    });
+    localStorage.setItem("usuarios", JSON.stringify(usuarios));
+}
