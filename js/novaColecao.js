@@ -18,17 +18,33 @@ document.querySelector("#send").addEventListener("click", () => {
     const img = localStorage.getItem("colecao-image");
 
     addNovaColecao(nome.value, img);
+    location.reload();
 });
 
 function addNovaColecao(nomeColecao, imgColecao) {
+    let posicoesNulas = 0;
+    for (l = 0; l < colecoes.length; l++) {
+        if (colecoes[l] == null) {
+            colecoes[l] = ({
+                nome: nomeColecao,
+                img: imgColecao,
+                cartas: cartas
+            });
+            localStorage.setItem("colecoes", JSON.stringify(colecoes));
+            posicoesNulas++;
+            break;
+        }
+    }
 
-    colecoes.push({
-        nome: nomeColecao,
-        img: imgColecao,
-        cartas: cartas
-    });
+    if (posicoesNulas == 0) {
+        colecoes.push({
+            nome: nomeColecao,
+            img: imgColecao,
+            cartas: cartas
+        });
 
-    localStorage.setItem("colecoes", JSON.stringify(colecoes));
+        localStorage.setItem("colecoes", JSON.stringify(colecoes));
+    }
 }
 
 
